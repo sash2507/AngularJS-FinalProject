@@ -1,0 +1,26 @@
+<h1> Vote my Look </h1>
+<h3> Welcome {{ctrl.name}} </h3>
+
+<div>
+	<li ng-repeat="photo in ctrl.photoList">
+		<span>photo here</span>
+		
+		<span ng-bind="photo.name"></span>
+		<span ng-bind="photo.store"></span>
+		<span ng-bind="photo.price"></span>
+		<input type="radio">Yes
+		<input type="radio">No
+		<button>Go!</button>
+	</li>
+</div>
+
+<h3>To Do List</h3>
+		<ul>
+			<li ng-repeat="todo in ctrl2.toDos" ng-class="todo.priority">
+				<div>
+					<span>Item {{$index + 1}}</span><br>
+					<span ng-bind="'Name: ' + todo.name"></span><br>
+					<span ng-bind="'Description: ' + todo.description"></span>
+				</div>
+			</li>
+		</ul>
